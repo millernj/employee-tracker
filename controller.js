@@ -250,7 +250,7 @@ const addEmployee = async () => {
     }
   ])
   const result = await orm.insert('employees', newEmployee);
-
+  console.log('Added!');
   renderMainMenu();
 }
 
@@ -265,7 +265,7 @@ const removeEmployee = async () => {
     }
   ])
   const result = await orm.deleteById('employees', id);
-
+  console.log('Removed!');
   renderMainMenu();
 }
 
@@ -288,7 +288,7 @@ const updateEmployeeRole = async () => {
   ])
 
   const result = await orm.updateById('employees', id, { role_id });
-
+  console.log('Updated!');
   renderMainMenu();
 }
 
@@ -310,7 +310,7 @@ const updateEmployeeManager = async () => {
   ])
 
   const result = await orm.updateById('employees', id, { manager_id });
-
+  console.log('Updated!');
   renderMainMenu();
 }
 
@@ -330,7 +330,7 @@ const addDepartment = async () => {
     }
   ])
   const result = await orm.insert('departments', newDepartment);
-
+  console.log('Added!');
   renderMainMenu();
 }
 
@@ -345,7 +345,7 @@ const removeDepartment = async () => {
     }
   ])
   const result = await orm.deleteById('departments', id);
-
+  console.log('Removed!');
   renderMainMenu();
 }
 
@@ -384,7 +384,7 @@ const addRole = async () => {
   ])
 
   const result = await orm.insert('roles', newRole);
-
+  console.log('Added!');
   renderMainMenu();
 }
 
@@ -399,7 +399,7 @@ const removeRole = async () => {
     }
   ])
   const result = await orm.deleteById('roles', id);
-
+  console.log('Removed!');
   renderMainMenu();
 }
 
