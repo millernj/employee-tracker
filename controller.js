@@ -25,7 +25,7 @@ async function renderMainMenu() {
         value: 'viewAllEmployeesByManager'
       },
       {
-        name: 'Add Employee',
+        name: 'Add employee',
         value: 'addEmployee'
       },
       {
@@ -246,7 +246,7 @@ const addEmployee = async () => {
       type: 'list',
       name: 'manager_id',
       message: 'Who is their manager?',
-      choices: employees
+      choices: [...employees, { name: 'They don\'t have a manager', value: null }]
     }
   ])
   const result = await orm.insert('employees', newEmployee);
