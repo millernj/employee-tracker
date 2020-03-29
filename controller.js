@@ -195,7 +195,7 @@ const viewAllEmployeesByDepartment = async () => {
       'LEFT JOIN roles on employees.role_id = roles.id',
       'LEFT JOIN departments on roles.department_id = departments.id',
       'LEFT JOIN employees as managers on employees.manager_id = managers.id',
-      'ORDER BY manager'
+      'ORDER BY department'
     ]);
   renderTable(employees);
   renderMainMenu();
