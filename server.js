@@ -6,7 +6,7 @@ const renderMainMenu = require('./controller');
 
 async function main() {
   await orm.connect();
-  await renderMainMenu();
+  renderMainMenu();
 }
 
 main();
